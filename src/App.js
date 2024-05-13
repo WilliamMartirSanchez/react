@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+const user = {
+  name: 'William Màrtir',
+  imageUrl: 'https://img.freepik.com/fotos-premium/diario-gatos-fotos-cautivadoras-amantes-gatitos_563241-4057.jpg',
+  imageSize: 180,
+};
 
-function App() {
+export default function Profile() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>{user.name}</h1>
+      <img
+        className="avatar"
+        src={user.imageUrl}
+        alt={'Foto de ' + user.name}
+        style={{
+          width: user.imageSize,
+          height: user.imageSize
+        }}
+      />
+    </>
   );
 }
-
-export default App;
